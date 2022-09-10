@@ -1,0 +1,183 @@
+:root {
+  /* Cores */
+  --green-base: #278636;
+  --white-base: #ffffff;
+  --gray-base: #d8d9d9;
+  --gray-opacity: #dadbd8dc;
+
+  /* Espaçamentos */
+  --space-border-base: 15px;
+  --space-base: 10px;
+  --space-large: 40px;
+  --space-xlarge: 50px;
+  --space-xxlarge: 80px;
+  --space-xxxlarge: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--white-base);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("/public/background-ex1.png");
+}
+
+/* Container da Página */
+#container {
+  /* Ocupando 100% de largura e altura */
+  width: 100%;
+  height: 100vh;
+  /* Centrralizando na tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container dos itens */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-large);
+  width: 90%;
+}
+
+/* Header Inicial */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-large);
+  align-items: center;
+  border-radius: var(--space-border-base);
+  background-color: var(--green-base);
+  padding: var(--space-xlarge) var(--space-xxxlarge);
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  width: 59%;
+}
+
+header div p {
+  align-self: flex-end;
+}
+
+/* Menu de navegação */
+nav {
+  background-color: var(--green-base);
+  border-radius: var(--space-border-base);
+  padding: var(--space-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 35%;
+  font-size: 1.2em;
+  margin: var(--space-base);
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li:hover {
+  color: var(--gray-base);
+}
+
+nav input {
+  border-radius: var(--space-border-base);
+  background-color: var(--gray-base);
+  outline: none;
+  padding-left: var(--space-base);
+  font-size: 0.9em;
+  border: none;
+  height: 40px;
+}
+
+/* Icon do NAVBAR */
+#icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#icon div {
+  width: 45px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: var(--white-base);
+}
+
+/* Seção com os cards */
+section {
+  border-radius: var(--space-border-base);
+  border: 2px var(--green-base) solid;
+  background-color: var(--gray-opacity);
+  padding: var(--space-large);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xxxlarge);
+  justify-content: space-around;
+}
+
+.card {
+  border-radius: var(--space-border-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--green-base);
+  padding: 60px 85px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.card:hover {
+  scale: 1.2;
+}
+
+.card p {
+  margin-top: var(--space-large);
+}
+
+@media screen and (max-width: 992px) {
+  #container {
+    height: 100%;
+    margin: var(--space-base);
+  }
+
+  main {
+    width: 80%;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: var(--space-large);
+  }
+
+  .card:hover {
+    scale: 1;
+  }
+}
