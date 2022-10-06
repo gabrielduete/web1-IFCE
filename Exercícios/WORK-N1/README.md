@@ -4,4 +4,4 @@
 
 - ### Requisitos
 
-<img src='./atv-n1.jpg' />
+<img src='./assets/atv-n1.jpg' />

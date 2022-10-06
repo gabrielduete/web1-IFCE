@@ -1,0 +1,1 @@
+/* NA PASTA *HELPERS* é criado funções que possam ajudar no desenvolvimento (funções repetidas, etc)*/
