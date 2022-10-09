@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #1E1E1E;
+}
+
+
+.principal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+h1 {
+    margin-top: 50px;
+    color: white;
+    font-family: Arial, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.verticalLine {
+    margin-top: 50px;
+    height: 650px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    border-left: 3px solid #BEBEBE;
+    align-self: center;
+    border-radius: 20px;
+    opacity: 10%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10%;
+    margin-top: 5%;
+
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleInput {
+    padding-left: 10px;
+    width: 500px;
+    height: 40px;
+    background-color: #4926AB;
+    border: 0px;
+    border-radius: 5px;
+}
+
+::-moz-placeholder {
+    color: red;
+}
+
+.descricaoInput {
+    margin-top: 15px;
+    height: 150px;
+    padding-left: 10px;
+    width: 500px;
+    background-color: #4926AB;
+    border: 0px;
+    border-radius: 5px;
+
+}
+
+.buttonAddActivity {
+    margin-top: 50px;
+    color: white;
+    background-color: #FF620A;
+    border: 0px;
+    height: 50px;
+    width: 500px;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
