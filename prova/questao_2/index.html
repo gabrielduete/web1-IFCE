@@ -6,27 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO DO</title>
+
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-
     <div class="principal">
         <h1>To do</h1>
         <div class="verticalLine"></div>
         <h1>Atividade</h1>
+    </div>
 
+    <div>
+        <ul id="listActivity">
+
+        </ul>
     </div>
 
     <div class="formulario">
         <form>
-            <input type="text" placeholder="Título" class="titleInput">
-            <input type="text" placeholder="descrição" class="descricaoInput">
+            <input type="text" placeholder="Título" class="titleInput" id="#title">
+            <input type="text" placeholder="descrição" class="descricaoInput" id="#description">
         </form>
-        <button class="buttonAddActivity">Adicionar atividade</button>
+
+        <button class="buttonAddActivity" id="#btnAddActivity">Adicionar atividade</button>
     </div>
 
-
+   
+    <script src="./functions/new_activity.js"></script>
 
 </body>
 

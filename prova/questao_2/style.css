@@ -51,7 +51,7 @@ h1 {
     flex-direction: column;
 }
 
-.titleInput {
+.formulario .titleInput {
     padding-left: 10px;
     width: 500px;
     height: 40px;
@@ -60,11 +60,7 @@ h1 {
     border-radius: 5px;
 }
 
-::-moz-placeholder {
-    color: red;
-}
-
-.descricaoInput {
+.formulario .descricaoInput {
     margin-top: 15px;
     height: 150px;
     padding-left: 10px;
