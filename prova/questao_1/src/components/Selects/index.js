@@ -19,10 +19,10 @@ const createIcon = (container, className) => {
 const containCard = (container, name, icon) => {
   const containerCard = document.createElement("div")
 
-  containerCard.className = ""
+  containerCard.className = "cards"
 
-  createTitle(containerCard, name)
   createIcon(containerCard, icon)
+  createTitle(containerCard, name)
 
   container.appendChild(containerCard)
 }
@@ -32,7 +32,7 @@ const Selects = (app) => {
 
   container.className = "containCards"
 
-  cards.map(({ name, icon }) => {
+  cards.forEach(({ name, icon }) => {
     containCard(container, name, icon)
   })
 

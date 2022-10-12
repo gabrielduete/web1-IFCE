@@ -1,15 +1,15 @@
 export const cards = [
   {
     name: "Notebook",
-    icon: "fa-solid fa-laptop",
+    icon: "fa-solid fa-laptop fa-4x",
   },
   {
     name: "Celular",
-    icon: "fa-solid fa-mobile",
+    icon: "fa-solid fa-mobile-screen fa-4x",
   },
   {
     name: "Tablet",
-    icon: "fa-solid fa-tablet",
+    icon: "fa-solid fa-tablet-screen-button fa-4x",
   },
 ]
 
