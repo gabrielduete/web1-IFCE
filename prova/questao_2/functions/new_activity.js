@@ -31,11 +31,15 @@ function createTagDiv(tituloTarefa, descricaoTarefa) {
     let div = document.createElement("div");
     div.style.marginTop = "20px";
     div.style.borderRadius = "10px";
-    div.style.backgroundColor = "#666565";
-    div.style.width = "500px";
+    div.style.backgroundColor = generateColor();
+    div.style.width = "130px";
+    div.style.height="100px";
+    div.style.marginRight="15px";
     div.style.marginBottom = "15px";
     div.style.padding = "10px"
     div.style.flexDirection = "column";
+    div.style.textOverflow="ellipsis";
+    div.style.overflow="hidden";
 
     let h3 = document.createElement("h3");
     h3.style.fontFamily = "Arial, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
@@ -68,4 +72,19 @@ btnClear.addEventListener("click", (e) => {
         div.removeChild(div.firstChild);
     }
 });
+
+function generateColor() {
+
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    
+    return color;
+    
+  }
+  
+  console.log(generateColor()) // #8432EA
 

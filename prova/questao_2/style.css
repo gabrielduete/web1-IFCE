@@ -34,6 +34,13 @@ body {
     flex-direction: column;
 }
 
+.list{
+    width: 550px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-items: center;
+}
+
 .add-form {
     align-items: center;
     display: flex;
@@ -47,7 +54,7 @@ body {
 
 
 .title {
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     font-family: Arial, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
