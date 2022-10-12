@@ -15,7 +15,7 @@ export const cards = [
 
 export const items = [
   {
-    image: "macbook.png",
+    srcImage: "../public/images/macbook.png",
     description: [
       "MacBook - PRO",
       "CPU de 8 núcleos",
@@ -25,7 +25,7 @@ export const items = [
     ],
   },
   {
-    image: "iphone.png",
+    srcImage: "../public/images/iphone.png",
     description: [
       "Iphone 14",
       "6,7 pol. 512GB",
@@ -36,15 +36,12 @@ export const items = [
     ],
   },
   {
-    image: "tablet-bolado.png",
+    srcImage: "../public/images/tablet-bolado.png",
     description: [
       "iPad pro 12",
       "Apple Pencil (2ª geração)",
       "12MP (fotos)",
       "12MP Ultra Wide TrueDepth",
-      "CPU Apple M1",
-      "2TB",
-      "12MP Wide e 10MP Ultra Wide",
     ],
   },
 ]

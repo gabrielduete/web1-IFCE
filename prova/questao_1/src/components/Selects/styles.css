@@ -1,9 +1,9 @@
 .containCards {
-  margin: 3% 20%;
   display: flex;
   flex-direction: column;
   gap: 30px;
   color: #ff620a;
+  width: 400px;
 }
 
 .cards {
@@ -27,4 +27,26 @@
 
 .cards h1 {
   font-size: 1.2em;
+}
+
+.containerSelects {
+  margin: 3% 20%;
+  display: flex;
+  gap: 200px;
+}
+
+.containerItem {
+  display: flex;
+  color: black;
+}
+
+.containerItem img {
+  width: 250px;
+  height: 150px;
+}
+
+.containerItem p {
+  margin-left: 5%;
+  font-size: 20px;
+  width: 200px;
 }
