@@ -1,10 +1,12 @@
 let listActivity = document.getElementById("#listActivity");
 const btnAddActivity = document.getElementById('#btnAddActivity');
+const btnClear = document.getElementById('#btnClear');
+const inputTitleActivity = document.getElementById('#title');
+const inputDescriptionActivity = document.getElementById('#description');
 
 btnAddActivity.addEventListener("click", (e) => {
-    const inputTitleActivity = document.getElementById('#title');
-    const inputDescriptionActivity = document.getElementById('#description');
-    
+
+
     const valorTitulo = inputTitleActivity.value;
     const valorDescricao = inputDescriptionActivity.value;
 
@@ -27,14 +29,27 @@ function addNewActivity(tituloTarefa, descricaoTarefa) {
 function createTagDiv(tituloTarefa, descricaoTarefa) {
 
     let div = document.createElement("div");
-
+    div.style.marginTop = "20px";
+    div.style.borderRadius = "10px";
+    div.style.backgroundColor = "#666565";
+    div.style.width = "500px";
+    div.style.marginBottom = "15px";
+    div.style.padding = "10px"
+    div.style.flexDirection = "column";
 
     let h3 = document.createElement("h3");
+    h3.style.fontFamily = "Arial, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+    h3.style.color = "#fff";
+    h3.style.fontSize = "20px";
     h3.classList.add("titleCard");
     h3.innerHTML = tituloTarefa;
 
-
     let h4 = document.createElement("h4");
+    h4.style.marginTop = "15px";
+    h4.style.fontFamily = "Arial, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+    h4.style.color = "#fff";
+    h4.style.fontSize = "12px"
+    h4.classList.add("titleCard");
     h4.classList.add("descriptionCard");
     h4.innerHTML = descricaoTarefa;
 
@@ -45,3 +60,12 @@ function createTagDiv(tituloTarefa, descricaoTarefa) {
     return div;
 
 }
+
+btnClear.addEventListener("click", (e) => {
+    var div = document.getElementById("#listActivity");
+
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
+    }
+});
+

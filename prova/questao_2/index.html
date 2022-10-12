@@ -13,38 +13,33 @@
 
 <body>
 
-    <div class="layout">
-        <h1>To do</h1>
-        <div class="verticalLine"></div>
-        <h1>Atividade</h1>
+    <div class="container">
 
+        <button class="buttonClear" id="#btnClear">
+            <i class="material-icons" style="color:#FF0000; background-color: transparent;">delete</i>
+        </button>
+
+        <div class="todo-list">
+            <span class="title">To do</span>
+
+            <div id="#listActivity">
+
+            </div>
+        </div>
+
+
+        <div class="add-form">
+            <span class="title">Atividade</span>
+            <div class="formulario">
+                <form>
+                    <input type="text" placeholder="Título" class="titleInput" id="#title">
+                    <textarea placeholder="Descrição" class="descricaoInput" id="#description"></textarea>
+                </form>
+                <button class="buttonAddActivity" id="#btnAddActivity">Adicionar atividade</button>
+            </div>
+
+        </div>
     </div>
-    <div>
-        <ul id="#listActivity">
-
-
-        </ul>
-    </div>
-
-    <div class="formulario">
-        <form>
-            <input type="text" placeholder="Título" class="titleInput" id="#title">
-            <textarea placeholder="Descrição" class="descricaoInput" id="#description"></textarea>
-
-        </form>
-
-        <button class="buttonAddActivity" id="#btnAddActivity">Adicionar atividade</button>
-    </div>
-    <button>
-        <i class="material-icons" style="font-size:25px">delete</i>
-    </button>
-
-
-
-
-
-
-
 
     <script src="./functions/new_activity.js"></script>
 
