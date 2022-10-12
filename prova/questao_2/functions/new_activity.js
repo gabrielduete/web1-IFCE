@@ -1,46 +1,15 @@
-let inputTitleActivity = document.getElementById('#title');
-let inputDescriptionActivity = document.getElementById('#description');
-let btnAddActivity = document.getElementById('#btnAddActivity');
 let listActivity = document.getElementById("#listActivity");
+const btnAddActivity = document.getElementById('#btnAddActivity');
 
-if (inputTitleActivity)
-    inputTitleActivity.addEventListener("keypress", (e) => {
+btnAddActivity.addEventListener("click", (e) => {
+    const inputTitleActivity = document.getElementById('#title');
+    const inputDescriptionActivity = document.getElementById('#description');
+    
+    const valorTitulo = inputTitleActivity.value;
+    const valorDescricao = inputDescriptionActivity.value;
 
-        let tituloTarefa = {
-            nome: inputTitleActivity.value,
-            id: gerarID(),
-        }
-
-        console.log(tituloTarefa.nome);
-
-    });
-
-if (inputDescriptionActivity)
-    inputDescriptionActivity.addEventListener("keypress", (e) => {
-
-        let descricaoTarefa = {
-            nome: inputDescriptionActivity.value,
-
-        }
-    });
-
-if (btnAddActivity)
-    btnAddActivity.addEventListener("click", (e) => {
-
-
-        // let tituloTarefa = {
-        //     nome: inputTitleActivity.value,
-        //     id: gerarID(),
-        // }
-
-        // let descricaoTarefa = {
-        //     nome: inputDescriptionActivity.value,
-        // }
-
-        console.log(tituloTarefa.id, descricaoTarefa.value);
-
-        addNewActivity(tituloTarefa, descricaoTarefa);
-    });
+    addNewActivity(valorTitulo, valorDescricao);
+});
 
 
 function gerarID() {
@@ -62,7 +31,7 @@ function createTagDiv(tituloTarefa, descricaoTarefa) {
 
     let h3 = document.createElement("h3");
     h3.classList.add("titleCard");
-    h3.innerHTML = tituloTarefa.value;
+    h3.innerHTML = tituloTarefa;
 
 
     let h4 = document.createElement("h4");
