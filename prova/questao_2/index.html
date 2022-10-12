@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button class="buttonClear" id="#btnClear">
+            <i class="material-icons" style="color:#FF0000; background-color: transparent;">delete</i>
+        </button>
+
+        <div class="todo-list">
+            <span class="title">To do</span>
+
+            <div class="list" id="#listActivity">
+            </div>
+        </div>
+
+
+        <div class="add-form">
+            <span class="title">Atividade</span>
+            <div class="formulario">
+                <form>
+                    <input type="text" placeholder="Título" class="titleInput" id="#title">
+                    <textarea placeholder="Descrição" class="descricaoInput" id="#description"></textarea>
+                </form>
+                <button class="buttonAddActivity" id="#btnAddActivity">Adicionar atividade</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./functions/new_activity.js"></script>
+
+</body>
+
+</html>
