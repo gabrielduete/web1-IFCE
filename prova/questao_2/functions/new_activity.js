@@ -3,42 +3,44 @@ let inputDescriptionActivity = document.getElementById('#description');
 let btnAddActivity = document.getElementById('#btnAddActivity');
 let listActivity = document.getElementById("#listActivity");
 
+if (inputTitleActivity)
+    inputTitleActivity.addEventListener("keypress", (e) => {
 
-inputTitleActivity.addEventListener("keypress", (e) => {
+        let tituloTarefa = {
+            nome: inputTitleActivity.value,
+            id: gerarID(),
+        }
 
-    let tituloTarefa = {
-        nome: inputTitleActivity.value,
-        id: gerarID(),
-    }
+        console.log(tituloTarefa.nome);
 
-});
+    });
 
+if (inputDescriptionActivity)
+    inputDescriptionActivity.addEventListener("keypress", (e) => {
 
-inputDescriptionActivity.addEventListener("keypress", (e) => {
+        let descricaoTarefa = {
+            nome: inputDescriptionActivity.value,
 
-    let descricaoTarefa = {
-        nome: inputDescriptionActivity.value,
+        }
+    });
 
-    }
-});
-
-
-btnAddActivity.addEventListener("click", (e) => {
+if (btnAddActivity)
+    btnAddActivity.addEventListener("click", (e) => {
 
 
-    let tituloTarefa = {
-        nome: inputTitleActivity.value,
-        id: gerarID(),
-    }
+        // let tituloTarefa = {
+        //     nome: inputTitleActivity.value,
+        //     id: gerarID(),
+        // }
 
-    let descricaoTarefa = {
-        nome: inputDescriptionActivity.value,
-    }
+        // let descricaoTarefa = {
+        //     nome: inputDescriptionActivity.value,
+        // }
 
-    console.log(tituloTarefa.id, descricaoTarefa.value);
+        console.log(tituloTarefa.id, descricaoTarefa.value);
 
-    addNewActivity(tituloTarefa, descricaoTarefa);
-});
+        addNewActivity(tituloTarefa, descricaoTarefa);
+    });
 
 
 function gerarID() {
