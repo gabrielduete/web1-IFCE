@@ -36,6 +36,16 @@
   justify-content: space-evenly;
 }
 
+@media screen and (max-width: 992px) {
+  .containerSelects {
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .containerItem {
   display: flex;
   flex-direction: column;

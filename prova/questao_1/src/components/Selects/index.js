@@ -54,7 +54,7 @@ const Modal = (contain) => {
   modal.className = "modal"
 
   const titleModal = document.createElement("h1")
-  titleModal.innerHTML = "Opções de parcelamento"
+  titleModal.innerHTML = "Opções de parcelamento - clique para sair"
 
   const table = document.createElement("table")
   const trTitle = document.createElement("tr")
@@ -68,6 +68,8 @@ const Modal = (contain) => {
   trTitle.appendChild(tdParcel)
   table.appendChild(trTitle)
 
+  const closeModal = document.createElement("button")
+
   for (let i = 1; i < parcel + 1; i++) {
     let tr = document.createElement("tr")
     let tdValueResult = document.createElement("td")
@@ -80,7 +82,7 @@ const Modal = (contain) => {
 
     tdValueResult.innerHTML =
       i > 5
-        ? `${(value / i).toFixed(2)} + 10% de juros`
+        ? `${(value / i).toFixed(2)} + juros de 10% aplicado`
         : (value / i).toFixed(2)
     tdParcelResult.innerHTML = i
     tr.appendChild(tdValueResult)
@@ -95,6 +97,11 @@ const Modal = (contain) => {
   container.appendChild(modal)
 
   contain.appendChild(container)
+
+  container.addEventListener("click", () => {
+    container.removeChild(container.lastChild)
+    contain.removeChild(contain.lastChild)
+  })
 }
 
 const Result = (app) => {
