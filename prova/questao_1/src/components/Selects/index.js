@@ -3,6 +3,9 @@ import { cards, items } from "./Selects.data.js"
 var validate = true
 var atived = false
 
+var value
+var parcel
+
 const container = document.createElement("section")
 container.className = "containerSelects"
 
@@ -11,6 +14,8 @@ const Inputs = (contain) => {
   const inputParcel = document.createElement("input")
   inputValue.type = "number"
   inputParcel.type = "number"
+  inputParcel.min = "0"
+  inputParcel.max = "12"
 
   const textInputValue = document.createElement("div")
   textInputValue.innerHTML = "R$ Valor"
@@ -30,7 +35,76 @@ const Inputs = (contain) => {
   wrapperInputs.appendChild(wrapperValue)
   wrapperInputs.appendChild(wrapperParcel)
 
+  inputValue.addEventListener("keyup", (e) => {
+    value = inputValue.value
+  })
+
+  inputParcel.addEventListener("keyup", (e) => {
+    parcel = inputParcel.value
+  })
+
   contain.appendChild(wrapperInputs)
+}
+
+const Modal = (contain) => {
+  const container = document.createElement("div")
+  const modal = document.createElement("section")
+
+  container.className = "background-modal"
+  modal.className = "modal"
+
+  const titleModal = document.createElement("h1")
+  titleModal.innerHTML = "Opções de parcelamento"
+
+  const table = document.createElement("table")
+  const trTitle = document.createElement("tr")
+  const tdValue = document.createElement("td")
+  const tdParcel = document.createElement("td")
+
+  tdValue.innerHTML = "Valor"
+  tdParcel.innerHTML = "Parcelas"
+
+  trTitle.appendChild(tdValue)
+  trTitle.appendChild(tdParcel)
+  table.appendChild(trTitle)
+
+  console.log(parcel)
+
+  for (let i = 1; i < parcel; i++) {
+    let tr = document.createElement("tr")
+    let tdValueResult = document.createElement("td")
+    let tdParcelResult = document.createElement("td")
+
+    tdValueResult.innerHTML = (value / i).toFixed(2)
+    tdParcelResult.innerHTML = i
+
+    tr.appendChild(tdValueResult)
+    tr.appendChild(tdParcelResult)
+
+    table.appendChild(tr)
+    modal.appendChild(table)
+  }
+
+  modal.appendChild(titleModal)
+  modal.appendChild(table)
+  container.appendChild(modal)
+
+  contain.appendChild(container)
+}
+
+const Result = (app) => {
+  const container = document.createElement("footer")
+  const button = document.createElement("button")
+
+  button.innerHTML = "Ver parcelamento"
+
+  button.addEventListener("click", () => {
+    Modal(app)
+  })
+
+  container.appendChild(button)
+
+  app.appendChild(container)
 }
 
 const ShowItems = (contain, index) => {
@@ -123,6 +197,7 @@ const Cards = (app) => {
 
 const Selects = (app) => {
   Cards(container)
+  Result(app)
 
   app.appendChild(container)
 }
