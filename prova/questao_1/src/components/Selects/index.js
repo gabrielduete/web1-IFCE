@@ -35,12 +35,12 @@ const Inputs = (contain) => {
   wrapperInputs.appendChild(wrapperValue)
   wrapperInputs.appendChild(wrapperParcel)
 
-  inputValue.addEventListener("keyup", (e) => {
-    value = inputValue.value
+  inputValue.addEventListener("keyup", () => {
+    value = parseInt(inputValue.value)
   })
 
-  inputParcel.addEventListener("keyup", (e) => {
-    parcel = inputParcel.value
+  inputParcel.addEventListener("keyup", () => {
+    parcel = parseInt(inputParcel.value)
   })
 
   contain.appendChild(wrapperInputs)
@@ -62,22 +62,27 @@ const Modal = (contain) => {
   const tdParcel = document.createElement("td")
 
   tdValue.innerHTML = "Valor"
-  tdParcel.innerHTML = "Parcelas"
+  tdParcel.innerHTML = "Parcela"
 
   trTitle.appendChild(tdValue)
   trTitle.appendChild(tdParcel)
   table.appendChild(trTitle)
 
-  console.log(parcel)
-
-  for (let i = 1; i < parcel; i++) {
+  for (let i = 1; i < parcel + 1; i++) {
     let tr = document.createElement("tr")
     let tdValueResult = document.createElement("td")
     let tdParcelResult = document.createElement("td")
 
-    tdValueResult.innerHTML = (value / i).toFixed(2)
-    tdParcelResult.innerHTML = i
+    if (parcel > 5) {
+      let fees = value * 0.1
+      value += fees
+    }
 
+    tdValueResult.innerHTML =
+      i > 5
+        ? `${(value / i).toFixed(2)} + 10% de juros`
+        : (value / i).toFixed(2)
+    tdParcelResult.innerHTML = i
     tr.appendChild(tdValueResult)
     tr.appendChild(tdParcelResult)
 
